@@ -1,0 +1,13 @@
+COM)Bac
+Bac)Cac
+Cac)Dac
+Dac)Eac
+Eac)Fac
+Bac)Gac
+Gac)Hac
+Dac)Iac
+Eac)Jac
+Jac)Kac
+Kac)Lac
+Kac)YOU
+Iac)SAN
