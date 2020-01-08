@@ -39,7 +39,7 @@ def solution(filename: str) -> tuple:
     max_visible = 0
     for satel in coors_set:
         counter = 0
-        for reciv in coors_set - set(satel):
+        for reciv in coors_set:
             if not collides(satel, reciv, coors_set):
                 counter += 1
 
@@ -58,9 +58,7 @@ def collides(satel: tuple, reciv: tuple, coors_set: set):
     elif vectSE[1] == 0:
         scale = abs(vectSE[0])
    
-
     scaled_vector = (vectSE[0]//scale, vectSE[1]//scale)
-
     for _ in range(scale-1):
         satel = (satel[0] + scaled_vector[0], satel[1] + scaled_vector[1])
         if satel in coors_set:
@@ -69,31 +67,4 @@ def collides(satel: tuple, reciv: tuple, coors_set: set):
      
 
 
-
-def timing(f):
-    def wrap(*args):
-        time1 = time.time()
-        ret = f(*args)
-        time2 = time.time()
-        print('{:s} function took {:.3f} ms'.format(f.__name__, (time2-time1)*1000.0))
-
-        return ret
-    return wrap
-
-@timing
-def check_find_dividers(n: int) -> "time":
-    for i in range(n):
-        find_dividers(i)
-
-@timing
-def check_gcd(n: int) -> "time":
-    for i in range(1, n):
-        for j in range(1, n):
-            gcd(i, j)
-
-
-
-
-print(solution("input.txt"))
 print(solution("test_input.txt"))
-print(find_dividers(0))
