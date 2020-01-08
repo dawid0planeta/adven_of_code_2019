@@ -1,4 +1,6 @@
-from Proc import Proccessor
+import sys
+sys.path.append("..")
+from tools.Proc import Proccessor
 
 
 def read_file(filename: str) -> list:
@@ -7,7 +9,7 @@ def read_file(filename: str) -> list:
     return memory
 
 
-memory = read_file("new_input.txt")
+memory = read_file("input.txt")
 proc = Proccessor(memory)
 out = proc.run()
 while out[0] != "HALT":

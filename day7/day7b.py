@@ -1,4 +1,6 @@
-from Proc import Proccessor
+import sys
+sys.path.append("..")
+from tools.Proc import Proccessor
 from itertools import cycle, permutations 
 
 
