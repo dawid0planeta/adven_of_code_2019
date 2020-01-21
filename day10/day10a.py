@@ -37,6 +37,7 @@ def find_dividers(a: int) -> set:
 def solution(filename: str) -> tuple:
     coors_set = read_data(filename)
     max_visible = 0
+    print(len(coors_set))
     for satel in coors_set:
         counter = 0
         for reciv in coors_set:
@@ -67,4 +68,4 @@ def collides(satel: tuple, reciv: tuple, coors_set: set):
      
 
 
-print(solution("test_input.txt"))
+print(solution("input.txt"))
